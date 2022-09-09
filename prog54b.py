@@ -1,0 +1,1 @@
+first = float(input(475)
