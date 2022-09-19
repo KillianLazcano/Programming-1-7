@@ -1,3 +1,20 @@
 {
-  "files": {}
+  "files": {
+    "k32.py": [
+      {
+        "id": "c0656edb-aa53-4b1d-bbda-11c767aff394",
+        "line": 88,
+        "version": 560,
+        "index": 1251
+      }
+    ],
+    "kareltemplate2.py": [
+      {
+        "id": "56ce8a72-9491-44e1-a80f-26e6b586573a",
+        "line": 40,
+        "version": 779,
+        "index": 566
+      }
+    ]
+  }
 }
