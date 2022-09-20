@@ -69,8 +69,7 @@ class ktools:
     self.m()
 
     def e(self):
-   """print E with beepers"""
-    self.tl()
+     self.tl()
     self.put5()
     self.tr()
     self.m()
@@ -121,6 +120,40 @@ class ktools:
     self.m()
     self.m()
 
+  def k(self):
+    """print K with beepers"""
+    self.tl()
+    self.put5()
+    self.ta()
+    self.m()
+    self.m()
+    self.tl()
+    self.m()
+    self.tl()
+    self.m()
+    self.put()
+    self.m()
+    self.tr()
+    self.m()
+    self.put()
+    self.tr()
+    self.m()
+    self.m()
+    self.m()
+    self.m()
+    self.put()
+    self.ta()
+    self.m()
+    self.tr()
+    self.m()
+    self.put()
+    self.tl()
+    self.m()
+    self.tl()
+    self.m()
+    self.m()
+    self.m()
+    
     
 
 def main():
