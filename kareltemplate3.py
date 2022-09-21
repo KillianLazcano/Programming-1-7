@@ -120,6 +120,41 @@ class ktools:
     self.m()
     self.m()
 
+  def fic(self) -> bool:
+    """front is clear"""
+    return front_is_clear()
+
+  def fib(self) -> bool:
+    """front is blocked"""
+    return not self.fic()
+
+  def ric(self) -> bool:
+    """right is clear"""
+    self.tr()
+    if self.fic():
+      self.tl()
+      return True # Immediately exit the function
+    self.tl()
+    return False 
+
+  def rib(self) -> bool:
+    """right is blocked"""
+    return not self.ric()
+
+  def mazemove(self):
+    """Maze Move"""
+    if self.fib():
+      self.tl()
+    else: # Otherwise
+      self.m()
+      if self.ric():
+        self.tr()
+        self.m()
+        if self.ric():
+          self.tr()
+          self.m()
+    pass
+
   def k(self):
     """print K with beepers"""
     self.tl()
@@ -153,37 +188,7 @@ class ktools:
     self.m()
     self.m()
     self.m()
-
-  def i(self):
-    """print I with beepers"""
-    self.put2()
-    self.m()
-    self.put()
-    self.tl()
-    self.m()
-    self.tl()
-    self.m()
-    self.tr()
-    self.put2()
-    self.m()
-    self.put2()
-    self.tr()
-    self.m()
-    self.put()
-    self.ta()
-    self.m()
-    self.m()
-    self.put()
-    self.tl()
-    self.m()
-    self.m()
-    self.m()
-    self.m()
-    self.tl()
-    self.m()
-    self.m()
-    self.m()
-    self.m()
+    
     
 
 def main():
