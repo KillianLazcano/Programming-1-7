@@ -184,7 +184,9 @@ class ktools:
     self.m()
     self.m()
     self.m()
-    
+
+  def a(self):
+    """Print A with beepers"""
 
 def main():
     """ Karel code goes here! """

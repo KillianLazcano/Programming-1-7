@@ -155,6 +155,26 @@ class ktools:
           self.m()
     pass
 
+  def mm(self, num):
+    """move multiple"""
+    for number in range(0, num):
+      self.m()
+
+  def putm(self, num):
+    """put multiple"""
+    for i in range(num-1):
+      self.put()
+      self.m()
+    self.put()
+
+  def pickm(self, num):
+    """pick multiple"""
+    for _ in range(num-1):
+      self.pick()
+      self.m()
+    self.pick()
+   
+  
   def k(self):
     """print K with beepers"""
     self.tl()
@@ -189,7 +209,15 @@ class ktools:
     self.m()
     self.m()
     
-  def 
+  def one(self):
+    self.tl()
+    self.mm(5)
+    self.ta()
+    self.putm(5)
+    self.tl()
+    self.mm(2)
+
+  
 
 def main():
     """ Karel code goes here! """
