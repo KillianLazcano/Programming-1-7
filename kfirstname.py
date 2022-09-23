@@ -144,7 +144,7 @@ class ktools:
     self.put()
     self.ta()
     self.m()
-    self.tr()
+    self.tl()
     self.m()
     self.put()
     self.tl()
@@ -199,10 +199,21 @@ class ktools:
     self.tr()
     self.m()
     self.put2()
+    self.tr()
     self.m()
     self.put2()
+    self.ta()
+    self.m()
+    self.m()
+    self.tr()
+    self.m()
+    self.put2()
+    self.tl()
+    self.m()
+    self.m()
+    
 
-  def N(self):
+  def n(self):
     """Print N with beepers"""
     self.tl()
     self.put5()
@@ -222,11 +233,7 @@ class ktools:
     self.m()
     self.tl()
     self.m()
-    self.put()
-    self.m()
-    self.tr()
-    self.m()
-    self.ta()
+    self.tl()
     self.put5()
     self.tr()
     self.m()
@@ -245,6 +252,14 @@ class ktools:
 def main():
     """ Karel code goes here! """
     kt = ktools()
+    kt.k()
+    kt.i()
+    kt.l()
+    kt.l()
+    kt.i()
+    kt.a()
+    kt.n()
+  
     pass
 
 
