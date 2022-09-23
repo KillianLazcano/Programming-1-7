@@ -202,7 +202,7 @@ class ktools:
     self.m()
     self.put2()
 
-  def N(self):
+  def n(self):
     """Print N with beepers"""
     self.tl()
     self.put5()

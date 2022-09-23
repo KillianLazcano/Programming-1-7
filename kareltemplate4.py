@@ -208,6 +208,90 @@ class ktools:
     self.m()
     self.m()
     self.m()
+
+  def i(self):
+    """print I with beepers"""
+    self.put2()
+    self.m()
+    self.put()
+    self.tl()
+    self.m()
+    self.tl()
+    self.m()
+    self.tr()
+    self.put2()
+    self.m()
+    self.put2()
+    self.tr()
+    self.m()
+    self.put()
+    self.ta()
+    self.m()
+    self.m()
+    self.put()
+    self.tl()
+    self.m()
+    self.m()
+    self.m()
+    self.m()
+    self.tl()
+    self.m()
+    self.m()
+    self.m()
+    self.m()
+
+  def a(self):
+    """Print A with beepers"""
+    self.tl()
+    self.put2()
+    self.m()
+    self.put2()
+    self.m()
+    self.tr()
+    self.m()
+    self.put2()
+    self.m()
+    self.tr()
+    self.m()
+    self.put2()
+    self.m()
+    self.put2()
+
+  def N(self):
+    """Print N with beepers"""
+    self.tl()
+    self.put5()
+    self.tr()
+    self.m()
+    self.tr()
+    self.m()
+    self.put()
+    self.m()
+    self.tl()
+    self.m()
+    self.put()
+    self.m()
+    self.tr()
+    self.m()
+    self.put()
+    self.m()
+    self.tl()
+    self.m()
+    self.put()
+    self.m()
+    self.tr()
+    self.m()
+    self.ta()
+    self.put5()
+    self.tr()
+    self.m()
+    self.tr()
+    self.m()
+    self.m()
+    self.m()
+    self.m()
+    self.tl()
+    self.m()
     
   def one(self):
     self.tl()
@@ -222,6 +306,7 @@ class ktools:
 def main():
     """ Karel code goes here! """
     kt = ktools()
+    
     pass
 
 
