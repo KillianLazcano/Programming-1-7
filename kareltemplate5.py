@@ -1,5 +1,5 @@
 from stanfordkarel import *
-from time import sleep
+
 
 class ktools:
   def m(self):
@@ -155,6 +155,26 @@ class ktools:
           self.m()
     pass
 
+  def mm(self, num):
+    """move multiple"""
+    for number in range(0, num):
+      self.m()
+
+  def putm(self, num):
+    """put multiple"""
+    for i in range(num-1):
+      self.put()
+      self.m()
+    self.put()
+
+  def pickm(self, num):
+    """pick multiple"""
+    for _ in range(num-1):
+      self.pick()
+      self.m()
+    self.pick()
+   
+  
   def k(self):
     """print K with beepers"""
     self.tl()
@@ -188,41 +208,140 @@ class ktools:
     self.m()
     self.m()
     self.m()
-    
-  def mm(self, num):
-    """move multiple"""
-    for number in range(0, num):
-      self.m()
 
-def main():
+  def i(self):
+    """print I with beepers"""
+    self.put2()
+    self.m()
+    self.put()
+    self.tl()
+    self.m()
+    self.tl()
+    self.m()
+    self.tr()
+    self.put2()
+    self.m()
+    self.put2()
+    self.tr()
+    self.m()
+    self.put()
+    self.ta()
+    self.m()
+    self.m()
+    self.put()
+    self.tl()
+    self.m()
+    self.m()
+    self.m()
+    self.m()
+    self.tl()
+    self.m()
+    self.m()
+    self.m()
+    self.m()
+
+  def a(self):
+    """Print A with beepers"""
+    self.tl()
+    self.put2()
+    self.m()
+    self.put2()
+    self.m()
+    self.tr()
+    self.m()
+    self.put2()
+    self.m()
+    self.tr()
+    self.m()
+    self.put2()
+    self.m()
+    self.put2()
+
+  def N(self):
+    """Print N with beepers"""
+    self.tl()
+    self.put5()
+    self.tr()
+    self.m()
+    self.tr()
+    self.m()
+    self.put()
+    self.m()
+    self.tl()
+    self.m()
+    self.put()
+    self.m()
+    self.tr()
+    self.m()
+    self.put()
+    self.m()
+    self.tl()
+    self.m()
+    self.put()
+    self.m()
+    self.tr()
+    self.m()
+    self.ta()
+    self.put5()
+    self.tr()
+    self.m()
+    self.tr()
+    self.m()
+    self.m()
+    self.m()
+    self.m()
+    self.tl()
+    self.m()
+    
+  def one(self):
+    self.tl()
+    self.mm(5)
+    self.ta()
+    self.putm(5)
+    self.tl()
+    self.mm(2)
+
+  def sob(self) -> bool:
+    """standing on beeper"""
+    return beepers_present()
+
+  def jump(self):
+    """jump for K510"""
+    while self.fic():
+      self.m()
+    self.tl()
+    while self.rib():
+      self.m()
+    self.tr()
+    self.m()
+    self.tr()
+    while self.fic():
+      self.m()
+    self.tl()
+
+    def find(self):
+      """find for K515"""
+      while not facing_north():
+        self.tl()
+      self.m()
+      if not self.sob():
+       self.tl()
+       self.m()
+       self.tl()
+       self.m()
+      for _ in range(2):
+        if not self.sob():
+          self.m()
+          self.tl()
+          self.m()
+      pass
+      
+    
+  
+  def main():
     """ Karel code goes here! """
     kt = ktools()
-    kt.m()
-    kt.tl()
-    kt.m()
-    kt.mazemove()
-    kt.mm(4)
-    kt.mazemove()
-    kt.m()
-    kt.tr()
-    kt.m()
-    kt.tr()
-    kt.mm(5)
-    kt.tr()
-    kt.m()
-    kt.tl()
-    kt.m()
-    kt.tl()
-    kt.mazemove()
-    kt.m()
-    kt.tr()
-    kt.mm(7)
-    kt.tr()
-    kt.mm(2)
-    kt.tr()
-    kt.m()
-    kt.mazemove()
-    sleep(3)
+    
     pass
 
 
