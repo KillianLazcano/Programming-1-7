@@ -316,7 +316,7 @@ def main():
     kt.mm(5)
     kt.tl()
     kt.m()
-    kt.pick()
+    kt.put()
     kt.ta()
     kt.m()
     kt.tl()
