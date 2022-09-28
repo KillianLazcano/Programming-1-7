@@ -1,4 +1,4 @@
-pythfrom stanfordkarel import *
+from stanfordkarel import *
 
 
 class ktools:
@@ -306,21 +306,7 @@ class ktools:
 def main():
     """ Karel code goes here! """
     kt = ktools()
-    kt.m()
-    kt.tl()
-    kt.m()
-    kt.put()
-    kt.ta()
-    kt.m()
-    kt.tl()
-    kt.mm(5)
-    kt.tl()
-    kt.m()
-    kt.put()
-    kt.ta()
-    kt.m()
-    kt.tl()
-    kt.mm(3)
+    
     pass
 
 
