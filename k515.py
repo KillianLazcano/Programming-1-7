@@ -345,7 +345,6 @@ def main():
     kt.tl()
     kt.m()
     kt.tr()
-    kt.m()
     while kt.sob():
      pick_beeper()
      kt.find()
