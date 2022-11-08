@@ -1,7 +1,7 @@
 length = int(input("Please enter length: "))
 width = int(input("Please enter width: "))
-height = int(input("Please enter length: "))
-volume = int(input("Please enter width: "))
+height = int(input("Please enter height: "))
+volume = int(input("Please enter volume: "))
 
 area = length + width + volume + height
 perim = area / 4
