@@ -10,8 +10,8 @@ green = (0, 255, 0)
 blue = (50, 150, 210)
 darkblue = (3, 36, 138)
 
-dis_width = 300
-dis_height = 500
+dis_width = 448
+dis_height = 576
 dis = pygame.display.set_mode((dis_width, dis_height))
 pygame.display.set_caption("Pac-Man")
 clock = pygame.time.Clock()
@@ -70,5 +70,14 @@ while not game_over:
       if event.key == pygame.K_RIGHT:
         x1_change = Pacman_block
         y1_change = 0
+      if event.key == pygame.K_UP:
+        y1_change = -Pacman_block
+        x1_change = 0
+      if event.key == pygame.K_DOWN:
+        y1_change = Pacman_block
+        x1_change = 0 
+  if x1 >= dis_width or x1 < 0 or y1 >= dis_height or y1 < 0:
+    game_close = True
+  
     
     
