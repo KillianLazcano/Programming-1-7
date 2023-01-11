@@ -1,4 +1,5 @@
 import pygame
+import random
 
 pygame.init()
 
@@ -37,6 +38,10 @@ def pacman(Pacman_block, pacman_list):
   for x in pacman_list:
     pygame.draw.rect(dis, yellow, [x[0], x[1], Pacman_block, Pacman_block])
 
+def message(msg,color):
+  mesg = font_style.render(msg, True, color)
+  dis.blit(mesg, [dis_width/6, dis_height/3])
+
 def gameloop():
   game_over = False
   game_close = False
@@ -46,11 +51,13 @@ def gameloop():
   y1_change = 0
   pacman_list = []
   pellets_eaten = 0
+  
+  
 
 while not game_over:
   while game_close:
     dis.fill(darkblue)
-    message("Game Over! Press R to restart or Q to quit", Red)
+    message("Game Over! Press R to restart or Q to quit", red)
     my_score(pellets_eaten * 10)
     pygame.display.update()
     for event in pygame.event.get():
@@ -78,6 +85,12 @@ while not game_over:
         x1_change = 0 
   if x1 >= dis_width or x1 < 0 or y1 >= dis_height or y1 < 0:
     game_close = True
+  x1 += x1_change
+  y1 += y1_change
+  dis.fill(darkblue)
+  pygame.draw.rect()
+  
+  
   
     
     
