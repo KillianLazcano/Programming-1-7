@@ -11,8 +11,8 @@ green = (0, 255, 0)
 blue = (50, 150, 210)
 darkblue = (3, 36, 138)
 
-dis_width = 448
-dis_height = 576
+dis_width = 606
+dis_height = 606
 dis = pygame.display.set_mode((dis_width, dis_height))
 pygame.display.set_caption("Pac-Man")
 clock = pygame.time.Clock()
@@ -51,7 +51,8 @@ def gameloop():
   y1_change = 0
   pacman_list = []
   pellets_eaten = 0
-  
+  pelletx = round(randrange(0, dis_width-Pacman_block)/10.0) * 10.0
+  pellety = round(randrange(0, dis_height-Pacman_block)/10.0) * 10.0
   
 
 while not game_over:
@@ -89,6 +90,31 @@ while not game_over:
   y1 += y1_change
   dis.fill(darkblue)
   pygame.draw.rect()
+  pygame.draw.rect(dis, white, [pelletx, pellety, Pacman_block, Pacman_block])
+  Pacman_Head = []
+  Pacman_Head.append(x1)
+  Pacman_Head.append(y1)
+  Pacman_List.append(Pacman_Head)
+  if len(snake_List) > pellets_eaten:
+    del snale_List[0]
+  for x in Pacman_List[:-1]:
+    if x == Pacman_Head:
+      game_close = True
+  pacman(Pacman_block, Pacman_List)
+  my_score(pellets_eatem * 10)
+  pygame.display.update()
+  if x1 == pelletx and y1 == pellety:
+    pelletx = round(randrange(0, dis_width-Pacman_block)/10.0) * 10.0
+    pellety = round(randrange(0, dis_height-Pacman_block)/10.0) * 10.0
+    pellets_eaten += 1
+  clock.Tick(Pacman_speed)
+pygame.quit()
+quit()
+
+gameloop()
+    
+  
+  
   
   
   
