@@ -1,5 +1,6 @@
 import pygame
 import random
+import math
 
 pygame.init()
 
@@ -16,107 +17,24 @@ dis_height = 606
 dis = pygame.display.set_mode((dis_width, dis_height))
 pygame.display.set_caption("Pac-Man")
 clock = pygame.time.Clock()
-Pacman_block = 10
-ghost1_block = 10
-ghost2_block = 10
-ghost3_block = 10
-ghost4_block = 10
-Pacman_speed = 15
-ghost1_speed = 18
-ghost2_speed = 17
-ghost3_speed = 17
-ghost4_speed = 17
+pacman = 10
+pacspeed = 15
+pinky = 10
+pinkyspeed = 17
+blinky = 10
+blinkyspeed = 16
+clyde = 10
+clydespeed = 16
+inky = 10
+inkyspeed = 17
+pacman.x
+pacman.y
 font_style = pygame.font.SysFont("sans-serif", 20)
 
 dis.fill(darkblue)
 
-def my_score(score):
-  num = font_style.render("Score: " + str(score), True, white)
-  dis.blit(num, [0, 0])
+def score(score):
+  val = font_style.render("Score: "+ str(score), True, white)
+  dis.blit(val, [0,0])
 
-def pacman(Pacman_block, pacman_list):
-  for x in pacman_list:
-    pygame.draw.rect(dis, yellow, [x[0], x[1], Pacman_block, Pacman_block])
-
-def message(msg,color):
-  mesg = font_style.render(msg, True, color)
-  dis.blit(mesg, [dis_width/6, dis_height/3])
-
-def gameloop():
-  game_over = False
-  game_close = False
-  x1 = dis_width / 2
-  y1 = dis_height / 2
-  x1_change = 0
-  y1_change = 0
-  pacman_list = []
-  pellets_eaten = 0
-  pelletx = round(randrange(0, dis_width-Pacman_block)/10.0) * 10.0
-  pellety = round(randrange(0, dis_height-Pacman_block)/10.0) * 10.0
-  
-
-while not game_over:
-  while game_close:
-    dis.fill(darkblue)
-    message("Game Over! Press R to restart or Q to quit", red)
-    my_score(pellets_eaten * 10)
-    pygame.display.update()
-    for event in pygame.event.get():
-      if event.type == pygame.KEYDOWN:
-        if event.key == pygame.K_q:
-          game_over = True
-          game_close = False
-        if event.key == pygame.K_r:
-          gameloop()
-  for event in pygame.event.get():
-    if event.type == pygame.QUIT:
-      game_over = True
-    if event.type == pygame.KEYDOWN:
-      if event.key == pygame.K_LEFT:
-        x1_change = -Pacman_block
-        y1_change = 0
-      if event.key == pygame.K_RIGHT:
-        x1_change = Pacman_block
-        y1_change = 0
-      if event.key == pygame.K_UP:
-        y1_change = -Pacman_block
-        x1_change = 0
-      if event.key == pygame.K_DOWN:
-        y1_change = Pacman_block
-        x1_change = 0 
-  if x1 >= dis_width or x1 < 0 or y1 >= dis_height or y1 < 0:
-    game_close = True
-  x1 += x1_change
-  y1 += y1_change
-  dis.fill(darkblue)
-  pygame.draw.rect()
-  pygame.draw.rect(dis, white, [pelletx, pellety, Pacman_block, Pacman_block])
-  Pacman_Head = []
-  Pacman_Head.append(x1)
-  Pacman_Head.append(y1)
-  Pacman_List.append(Pacman_Head)
-  if len(snake_List) > pellets_eaten:
-    del snale_List[0]
-  for x in Pacman_List[:-1]:
-    if x == Pacman_Head:
-      game_close = True
-  pacman(Pacman_block, Pacman_List)
-  my_score(pellets_eatem * 10)
-  pygame.display.update()
-  if x1 == pelletx and y1 == pellety:
-    pelletx = round(randrange(0, dis_width-Pacman_block)/10.0) * 10.0
-    pellety = round(randrange(0, dis_height-Pacman_block)/10.0) * 10.0
-    pellets_eaten += 1
-  clock.Tick(Pacman_speed)
-pygame.quit()
-quit()
-
-gameloop()
-    
-  
-  
-  
-  
-  
-    
-    
+def Pacman(pacman, )
